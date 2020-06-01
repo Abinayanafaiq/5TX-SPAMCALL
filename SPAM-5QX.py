@@ -66,6 +66,5 @@ class hago():
 				hago()
 			else:
 				print(colored("SPAM KE NOMOR " + nomor + " SUKSES",'red'))
-print(banner)
 hago()
 back()
