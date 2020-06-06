@@ -56,15 +56,6 @@ class hago():
 
 		for x in range(jmlh):
 			time.sleep(4)
-			r = requests.get(url+nomor, data=dat, headers=head)
-			if "TERAKHIR" in r.json()["message"]:
-				print(colored("SPAM KE NOMOR " + nomor + " GAGAL KARENA TOKEN HABIS TUNGGU 30 MNT UNTUK MENGISI TOKEN , EH JANGAN NYEPAM TERUS KASIAN",'green'))
-				sys.exit(1)
-			elif "periksa" in  r.json()["message"]:
-				print(colored("PERIKSA JARINGAN ANDA",'yellow'))
-				time.sleep(4)
-				hago()
-			else:
-				print(colored("SPAM KE NOMOR " + nomor + " SUKSES",'red'))
+			r = requests.get(url+nomor, data=dat, headers=head)					
 hago()
 back()
